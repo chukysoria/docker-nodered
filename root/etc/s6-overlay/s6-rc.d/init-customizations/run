@@ -1,0 +1,30 @@
+#!/usr/bin/with-contenv bash
+# shellcheck shell=bash
+
+# permissions
+lsiown -R abc:abc \
+    /opt
+
+# Ensure configuration exists
+if [ ! -f /config/settings.js ]; then
+    mkdir -p /config/nodes \
+        || echo "[Node-Red] Failed to create node-red configuration directory"
+
+    # Copy in template files
+    cp /etc/node-red/settings.js /config/
+fi
+
+# Pass in port & SSL settings
+sed -i "s/%%PORT%%/${NODERED_PORT:-1880}/" "/opt/node_modules/node-red-dashboard/nodes/ui_base.html"
+sed -i "s/%%SSL%%/false/" "/opt/node_modules/node-red-dashboard/nodes/ui_base.html"
+
+
+# Ensures conflicting Node-RED packages are absent
+cd /config || echo "Could not change directory to Node-RED"
+if [ ! -f /config/package.json ]; then
+    npm uninstall \
+        node-red-contrib-home-assistant \
+        node-red-contrib-home-assistant-llat \
+        node-red-contrib-home-assistant-ws \
+            || echo "Failed un-installing conflicting packages"
+fi

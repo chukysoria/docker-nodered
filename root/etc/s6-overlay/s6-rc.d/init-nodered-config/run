@@ -1,0 +1,31 @@
+#!/usr/bin/with-contenv bash
+# shellcheck shell=bash
+
+declare -a npmlist
+
+# Install user configured/requested packages
+if [ ! -z "$SYSTEM_PACKAGES" ]; then
+    apk update \
+        || echo 'Failed updating Alpine packages repository indexes'
+
+    for package in $SYSTEM_PACKAGES; do
+        apk add "$package" \
+            || echo "Failed installing system package ${package}"
+    done
+fi
+
+# Install user configured/requested packages
+if [ ! -z "$NPM_PACKAGES" ]; then
+    cd /opt || echo "Could not change directory to Node-RED"
+
+    echo "Starting installation of custom NPM/Node-RED packages..."
+    for package in $NPM_PACKAGES; do
+        npmlist+=("$package")
+    done
+
+    npm install \
+        --no-optional \
+        --only=production \
+        "${npmlist[@]}" \
+           || echo "Failed to install a specified npm package"
+fi
