@@ -2,6 +2,7 @@
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "extends": [
     "local>chukysoria/renovate-config",
-    "local>chukysoria/renovate-config:ext-release(npm,node-red)"
+    "local>chukysoria/renovate-config:ext-release(npm,node-red)",
+    "local>chukysoria/renovate-config:os-package(alpine_3_19)"
   ]
 }
