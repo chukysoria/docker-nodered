@@ -1,6 +1,6 @@
 # syntax=docker/dockerfile:1
 
-ARG BUILD_FROM=ghcr.io/chukysoria/baseimage-alpine:v0.4.2
+ARG BUILD_FROM=ghcr.io/chukysoria/baseimage-alpine:v0.5.0
 
 FROM ${BUILD_FROM}
 
@@ -33,7 +33,7 @@ RUN \
     \
     && apk add --no-cache \
         git=2.43.0-r0 \
-        icu-data-full=74.1-r0 \
+        icu-data-full=74.2-r0 \
         nodejs=20.10.0-r1 \
         npm=10.2.5-r0 \
         openssh-client-default=9.6_p1-r0 \
