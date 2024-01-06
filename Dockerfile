@@ -36,7 +36,7 @@ RUN \
         icu-data-full=74.1-r0 \
         nodejs=20.10.0-r1 \
         npm=10.2.5-r0 \
-        openssh-client=9.3_p2-r0 \
+        openssh-client-default=9.6_p1-r0 \
     \
     && npm install \
         --no-audit \
