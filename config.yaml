@@ -1,6 +1,6 @@
 ---
 image: nodered
-version: v1.1.12
+version: v1.1.13
 name: Node-red
 description: "[Node-Red](https://nodered.org/)  is a programming tool for wiring together hardware devices, APIs and online services in new and interesting ways."
 ext_release: 3.1.8
