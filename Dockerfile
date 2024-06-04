@@ -32,7 +32,7 @@ RUN \
         python3-dev=3.12.3-r1 \
     \
     && apk add --no-cache \
-        git=2.45.1-r0 \
+        git=2.45.2-r0 \
         icu-data-full=74.2-r0 \
         nodejs=20.13.1-r0 \
         npm=10.8.0-r0 \
