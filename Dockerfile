@@ -29,7 +29,7 @@ RUN \
         build-base=0.5-r3 \
         linux-headers=6.6-r0 \
         py3-pip=24.0-r2 \
-        python3-dev=3.12.3-r1 \
+        python3-dev=3.12.3-r2 \
     \
     && apk add --no-cache \
         git=2.45.2-r0 \
