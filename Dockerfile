@@ -1,6 +1,6 @@
 # syntax=docker/dockerfile:1@sha256:db1ff77fb637a5955317c7a3a62540196396d565f3dd5742e76dddbb6d75c4c5
 
-ARG BUILD_FROM=ghcr.io/chukysoria/baseimage-alpine:v0.6.25-3.20@sha256:058af9b1f3e48f0f88e37ae6f0b155afe75388add18cb11af652df316954dbfa
+ARG BUILD_FROM=ghcr.io/chukysoria/baseimage-alpine:v0.7.2-3.21
 FROM ${BUILD_FROM}
 
 # set version label
@@ -26,16 +26,16 @@ SHELL ["/bin/bash", "-o", "pipefail", "-c"]
 RUN \
     apk add --no-cache --virtual .build-dependencies \
         build-base=0.5-r3 \
-        linux-headers=6.6-r0 \
-        py3-pip=24.0-r2 \
+        linux-headers=6.6-r1 \
+        py3-pip=24.3.1-r0 \
         python3-dev=3.12.8-r1 \
     \
     && apk add --no-cache \
-        git=2.45.2-r0 \
+        git=2.47.1-r0 \
         icu-data-full=74.2-r0 \
-        nodejs=20.15.1-r0 \
+        nodejs=22.11.0-r0 \
         npm=10.9.1-r0 \
-        openssh-client-default=9.7_p1-r4 \
+        openssh-client-default=9.9_p1-r2 \
     \
     && npm install \
         --no-audit \
