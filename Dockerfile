@@ -34,7 +34,7 @@ RUN \
         git=2.49.1-r0 \
         icu-data-full=76.1-r1 \
         nodejs=22.16.0-r2 \
-        npm=11.3.0-r0 \
+        npm=11.3.0-r1 \
         openssh-client-default=10.0_p1-r7 \
     \
     && npm install \
