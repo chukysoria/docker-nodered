@@ -4,6 +4,6 @@
     "local>chukysoria/renovate-config",
     "local>chukysoria/renovate-config:docker-build",
     "local>chukysoria/renovate-config:ext-release(npm,node-red)",
-    "local>chukysoria/renovate-config:os-package(alpine_3_22)"
+    "local>chukysoria/renovate-config:os-package(alpine_3_23)"
   ]
 }
