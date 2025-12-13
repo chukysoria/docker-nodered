@@ -26,16 +26,16 @@ SHELL ["/bin/bash", "-o", "pipefail", "-c"]
 RUN \
     apk add --no-cache --virtual .build-dependencies \
         build-base=0.5-r3 \
-        linux-headers=6.14.2-r0 \
-        py3-pip=25.1.1-r0 \
+        linux-headers=6.16.12-r0 \
+        py3-pip=25.1.1-r1 \
         python3-dev=3.12.12-r0 \
     \
     && apk add --no-cache \
-        git=2.49.1-r0 \
+        git=2.52.0-r0 \
         icu-data-full=76.1-r1 \
         nodejs=24.11.1-r0 \
         npm=11.6.4-r0 \
-        openssh-client-default=10.0_p1-r10 \
+        openssh-client-default=10.2_p1-r0 \
     \
     && npm install \
         --no-audit \
