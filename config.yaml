@@ -3,7 +3,7 @@ image: nodered
 version: v1.4.21
 name: Node-red
 description: "[Node-Red](https://nodered.org/)  is a programming tool for wiring together hardware devices, APIs and online services in new and interesting ways."
-ext_release: "4.1.2"
+ext_release: "4.1.3"
 arch:
   - aarch64
   - x86_64
