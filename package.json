@@ -24,7 +24,6 @@
     "node-red-contrib-persistent-fsm": "1.2.1",
     "node-red-contrib-sunevents": "3.1.1",
     "node-red-contrib-time-range-switch": "1.2.0",
-    "node-red-dashboard": "3.6.6",
     "node-red-node-base64": "1.0.0",
     "node-red-node-email": "5.2.1",
     "node-red-node-feedparser": "1.0.3",
@@ -33,7 +32,6 @@
     "node-red-node-serialport": "2.0.3",
     "node-red-node-smooth": "0.1.2",
     "node-red-node-suncalc": "1.2.0",
-    "node-red-node-twitter": "1.2.0",
     "@node-red-contrib-themes/theme-collection": "4.1.1",
     "line-by-line": "0.1.6",
     "source-map-support": "0.5.21"
