@@ -26,13 +26,13 @@ SHELL ["/bin/bash", "-o", "pipefail", "-c"]
 RUN \
     apk add --no-cache --virtual .build-dependencies \
         build-base=0.5-r3 \
-        linux-headers=6.16.12-r0 \
-        py3-pip=25.1.1-r1 \
+        linux-headers=7.0.0-r1 \
+        py3-pip=26.1.2-r0 \
         python3-dev=3.12.13-r0 \
     \
     && apk add --no-cache \
         git=2.52.0-r0 \
-        icu-data-full=76.1-r1 \
+        icu-data-full=78.1-r0 \
         nodejs=24.14.1-r0 \
         npm=11.11.0-r0 \
         openssh-client-default=10.2_p1-r0 \
